@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us - Text Utils{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .contact-container {
+        margin-top: 60px;
+        padding: 40px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .contact-title {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+    <div class="contact-container">
+        <h2 class="contact-title text-center">Contact Us</h2>
+
+        <p class="text-center">Feel free to contact us anytime!</p>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <div class="container mt-5">
+    <div class="card shadow p-4">
+
+        <form action="https://formspree.io/f/xzdkryon" method="POST">
+
+            <div class="form-group mb-3">
+                <label>Your Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Email address</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Your Message</label>
+                <textarea name="message" class="form-control" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary px-4">Send Message</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+        <hr>
+
+        <p class="text-center mt-3">
+            Email: vikaskurmi1431@gmail.com <br>
+            Phone: +91 9458766445 <br>
+            Address: Bareilly, India
+        </p>
+    </div>
+</div>
+
+{% endblock %}

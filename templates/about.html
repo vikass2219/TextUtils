@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Text Utils{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .about-container {
+        margin-top: 60px;
+        padding: 40px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .about-title {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+    <div class="about-container">
+        <h2 class="about-title text-center">About Text Utils</h2>
+
+        <p class="lead text-center">Welcome to Text Utils!</p>
+
+        <p>
+            Text Utils is a simple and powerful tool designed to help users easily analyze and modify text.
+            You can convert text to uppercase, remove punctuation, eliminate extra spaces, and clean up formatting quickly and efficiently.
+        </p>
+
+        <p>
+            Our goal is to provide a fast, user-friendly platform that saves time and makes text processing easy for everyone.
+        </p>
+
+        <p>
+            This project is built using Django and is created for learning and practical purposes.
+        </p>
+
+        <p class="text-center font-weight-bold">
+            Thank you for visiting Text Utils!
+        </p>
+    </div>
+</div>
+
+{% endblock %}
